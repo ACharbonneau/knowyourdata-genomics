@@ -75,15 +75,15 @@ grep -c "GAATTC" Raphanus.fa
 
 `-c` grep 'counted' 88 instances of EcoRI
 
-####SSF, FASTQ and FNA & QUAL files
-SSF stands for Standard Flowgram Format and is for 454 data
+####SFF, FASTQ and FNA & QUAL files
+SFF stands for Standard Flowgram Format and is for 454 data.  
 FASTQ is named after FASTA and is the output from most Illumina sequencers
 FNA for FASTA nucleic acid, and QUAL for quality. If you have Solexa data you might have these
 These are all files that you might get from your sequencing facility, and they all tell you about the machine, the sequence, and the quality of the sequence. 
 
 These are more complex than FASTA files, because they include quality information, but that often makes them more useful. 
 
-Most likely, you'll only be using FASTQ, as most people are doing Illumina sequencing right now.
+Most likely, you'll only be using FASTQ. There are several reasons for this. First, most people are doing Illumina sequencing right now, which is usually delivered as FASTQ. Second, SFF files are binary, which means that your computer can read them, but you can't, i.e. they're not in a human-readable language; so SFF files are usually converted to FASTQ. FNA/Qual files are human-readable, but the data is ordered, so to find the quality data for the 50,006 sequence in your .fna file, you'd have to find the 50,006 entry in your .qual file...which is human-difficult, and these files are also generally merged into a single, easier to read FASTQ.
 
 ```bash
 head -4 33_20081121_2_RH2.fastq
