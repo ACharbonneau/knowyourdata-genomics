@@ -34,7 +34,7 @@ or
 
 ```bash
 cd
-curl -O https://www.dropbox.com/s/d7zitckb5fz8494/GenomicsLesson.zip
+curl -LO https://www.dropbox.com/s/d7zitckb5fz8494/GenomicsLesson.zip
 ```
 
 ##Checking the data
@@ -67,7 +67,7 @@ md5sum GenomicsLesson.zip
 The file I uploaded gave this answer:
 ```bash
 md5 GenomicsLesson.zip
-MD5 (GenomicsLesson.zip) = 47c3e3a8723977b81623ede875593277
+MD5 (GenomicsLesson.zip) = e237e30985867e6bea741949e42a0c3b
 ```
 
 
